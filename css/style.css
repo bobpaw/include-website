@@ -136,7 +136,8 @@ button:focus {
 }
 
 .section_gap {
-  padding: 120px 0;
+  padding-top: 60px;
+  padding-bottom: 120px;
 }
 
 .row_reverse {
