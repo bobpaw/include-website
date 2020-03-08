@@ -225,7 +225,7 @@ button:focus {
 }
 
 .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-  color: #F6B66C;
+  color: #4B94CC
 }
 
 .header_area .navbar .nav .nav-item.submenu {
@@ -381,7 +381,7 @@ button:focus {
 }
 
 .header_top .top_btn a:hover {
-  background: #F6B66C;
+  background: #B5DEFC;
   color: #fff;
 }
 
@@ -3487,10 +3487,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #719071;
 	padding: 60px 40px;
 	color: rgba(255,255,255,1.00);
-	margin-bottom: 20px;
-	border-bottom-right-radius: 6px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 6px;
+	
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -3563,10 +3560,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  padding: 3em;
-  background-image: url(https://subtlepatterns.com/patterns/retina_wood.png);
   color: grey;
   font-family: 'Quicksand', sans-serif;
+  background-repeat: no-repeat;
+  /*background-size: 1500px 1500px;*/
 }
 
 /* ================
@@ -3640,4 +3637,3 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
-
