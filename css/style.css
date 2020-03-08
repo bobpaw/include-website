@@ -476,7 +476,7 @@ h3 {
 .features_item {
   padding: 73px 45px 80px 60px;
   color: #fff;
-  background: #00c8e6;
+  background: #719071;
 }
 
 .features_item + .features_item {
@@ -484,7 +484,7 @@ h3 {
 }
 
 .features_item:nth-child(even) {
-  background: #04091e;
+  background: #95BFB1;
 }
 
 .features_item h3 {
