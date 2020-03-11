@@ -26,14 +26,14 @@ Table of Content:
 06/ breadcrumb
 07/ about
 08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
+09/ project
+10/ price
+11/ team
+12/ blog
+13/ video
+14/ features
+15/ career
+16/ contact
 17/ footer
 
 =====================================================================*/
@@ -225,116 +225,11 @@ button:focus {
 }
 
 .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-  color: #4B94CC
-}
-
-.header_area .navbar .nav .nav-item.submenu {
-  position: relative;
-}
-
-.header_area .navbar .nav .nav-item.submenu ul {
-  border: none;
-  padding: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  margin: 0px;
-  background: #fff;
-}
-
-@media (min-width: 992px) {
-  .header_area .navbar .nav .nav-item.submenu ul {
-    position: absolute;
-    top: 120%;
-    left: 0px;
-    min-width: 200px;
-    text-align: left;
-    opacity: 0;
-    -webkit-transition: all 300ms ease-in;
-    -o-transition: all 300ms ease-in;
-    transition: all 300ms ease-in;
-    visibility: hidden;
-    display: block;
-    border: none;
-    padding: 0px;
-    border-radius: 0px;
-  }
-}
-
-.header_area .navbar .nav .nav-item.submenu ul:before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #eeeeee transparent transparent transparent;
-  position: absolute;
-  right: 24px;
-  top: 45px;
-  z-index: 3;
-  opacity: 0;
-  -webkit-transition: all 400ms linear;
-  -o-transition: all 400ms linear;
-  transition: all 400ms linear;
-}
-
-.header_area .navbar .nav .nav-item.submenu ul .nav-item {
-  display: block;
-  float: none;
-  margin-right: 0px;
-  border-bottom: 1px solid #ededed;
-  margin-left: 0px;
-  -webkit-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
-
-.header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
-  line-height: 45px;
-  color: #222222;
-  padding: 0px 30px;
-  -webkit-transition: all 150ms linear;
-  -o-transition: all 150ms linear;
-  transition: all 150ms linear;
-  display: block;
-  margin-right: 0px;
-}
-
-.header_area .navbar .nav .nav-item.submenu ul .nav-item:last-child {
-  border-bottom: none;
-}
-
-.header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
-  background: #f9f9ff;
-  color: #00c8e6;
-}
-
-@media (min-width: 992px) {
-  .header_area .navbar .nav .nav-item.submenu:hover ul {
-    visibility: visible;
-    opacity: 1;
-    top: 100%;
-  }
-}
-
-.header_area .navbar .nav .nav-item.submenu:hover ul .nav-item {
-  margin-top: 0px;
-}
-
-.header_area .navbar .search {
-  font-size: 12px;
-  line-height: 60px;
-  display: inline-block;
-  color: #222222;
-  margin-left: 43px;
-}
-
-.header_area .navbar .search i {
-  font-weight: 600;
+  color: #F6B66C;
 }
 
 .header_area + section {
-  margin-top: 100px;
+   margin-top:140px;
 }
 
 .header_area.navbar_fixed {
@@ -352,24 +247,9 @@ button:focus {
 }
 
 .header_area.navbar_fixed .navbar {
-  background: #fff;
+  background: white;
 }
 
-.header_top .social_icon li a {
-  font-size: 12px;
-  line-height: 30px;
-  color: #cccccc;
-  width: 30px;
-  height: 30px;
-  background: #f9f9ff;
-  display: inline-block;
-  text-align: center;
-}
-
-.header_top .social_icon li a:hover {
-  background: #00c8e6;
-  color: #fff;
-}
 
 .header_top .top_btn a {
   font-weight: 500;
@@ -381,7 +261,7 @@ button:focus {
 }
 
 .header_top .top_btn a:hover {
-  background: #B5DEFC;
+  background: #F6B66C;
   color: #fff;
 }
 
@@ -645,10 +525,12 @@ h3 {
 
 .event_post .event_category {
   padding-bottom: 20px;
+
 }
 
 .event_category li {
   padding-bottom: 8px;
+  position: center;
 }
 
 .event_category li i {
@@ -810,7 +692,7 @@ h3 {
 }
 
 .br_image {
-  background-color:#95BFB1
+  background-color:#719071;
 }
 
 .page-cover-tittle {
@@ -3487,7 +3369,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #719071;
 	padding: 60px 40px;
 	color: rgba(255,255,255,1.00);
-	
+
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -3568,72 +3450,6 @@ body {
 
 /* ================
    Calendar Styling */
-.calendar {
-  background: white;
-  padding: 3em;
-  border-radius: 10px;
-}
-.calendar .month {
-  margin-top: 0;
-  font-weight: normal;
-  font-size: 3em;
-  color: #6EB590;
-}
-.calendar ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.calendar ol li {
-  float: left;
-  width: 14.28571%;
-}
-.calendar .day-names {
-  border-bottom: 1px solid #eee;
-}
-.calendar .day-names li {
-  text-transform: uppercase;
-  margin-bottom: .5em;
-}
-.calendar .days li {
-  border-bottom: 1px solid #eee;
-  min-height: 8em;
-}
-.calendar .days li .date {
-  margin: .5em 0;
-}
-.calendar .days li .event {
-  background: #6EB590;
-  font-size: .75em;
-  padding: 0 .75em;
-  line-height: 2em;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 1em;
-  margin-bottom: 1px;
-}
-.calendar .days li .event.span-2 {
-  width: 200%;
-}
-.calendar .days li .event.begin {
-  border-radius: 1em 0 0 1em;
-}
-.calendar .days li .event.end {
-  border-radius: 0 1em 1em 0;
-}
-.calendar .days li .event.all-day {
-  background: #9987B5;
-}
-.calendar .days li .event.clear {
-  background: none;
-}
-.calendar .days li:nth-child(n+29) {
-  border-bottom: none;
-}
-.calendar .days li.outside .date {
-  color: #ddd;
-}
+
 
 /*# sourceMappingURL=style.css.map */
