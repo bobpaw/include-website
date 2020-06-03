@@ -1,9 +1,10 @@
 @media (max-width:1199px){
     .header_area .navbar .nav .nav-item .nav-link{
         margin-right: 30px;
+        background:white;
     }
     .features_item {
-        padding: 50px 20px 55px 20px;
+        padding: 50px 50px 55px 20px;
     }
     .sermons_slider .owl-dots{
         position: relative;
@@ -25,10 +26,9 @@
     .navbar-toggler {
         border: none;
         border-radius: 0px;
-        padding: 0px;
+        padding: 10px;
         cursor: pointer;
-        margin-top: 20px;
-        margin-bottom: 20px;
+
     }
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
 		opacity: 1;
@@ -50,14 +50,14 @@
 		display: block;
 		width: 25px;
 		height: 3px;
-		background: #00c8e6;
+		background: #EE827F;
 		margin: auto;
 		margin-bottom: 4px;
 		transition: all 400ms linear;
 		cursor: pointer;
 	}
     .header_area + section {
-        margin-top: 91px;
+        margin-top: 110px;
     }
     .navbar .container{
         padding-left: 15px;
@@ -71,8 +71,10 @@
         padding: 0px;
     }
     .header_area .navbar .nav .nav-item .nav-link{
-        line-height: 35px;
+        line-height: 15px;
+        margin-bottom: 5px;
         margin-right: 0px;
+
         display: block;
     }
     .header_area .navbar .search{
@@ -121,11 +123,11 @@
         margin-top: 30px;
     }
 	.header_area .navbar-collapse{
-		max-height: 340px;
+		max-height: 200px;
 		overflow-y: scroll;
 	}
 	.header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
-		padding: 0px 15px;
+		padding: 0px 30px;
 	}
 }
 @media (max-width:767px){
@@ -147,7 +149,7 @@
         margin-top: 50px;
     }
     .section_gap{
-        padding: 80px 0px;
+        padding: 30px 0px;
     }
     .about_content{
         padding-bottom: 50px;
