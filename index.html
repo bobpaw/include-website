@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>Faith Church Multi</title>
+        <title>Define Include</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,48 +16,54 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166889026-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-166889026-1');
+        </script>
 
     </head>
     <body>
-       <!--================Header Area =================-->
-        <header class="header_area">
-            <div class="header_top">
-                <div class="container">
-                        <div class="col-sm-12 col-2">
-                            <div class="top_btn d-flex justify-content-end">
-                                <a href="#">Donate Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt="" width="175" height="125"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="ministries.html">Our Mission</a></li>
-                            <li class="nav-item"><a class="nav-link" href="event.html">Calendar</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Get Involved</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Our Staff</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Resources</a></li>
-                        </ul>
-                    </div> 
-                </div>
-            </nav>
-        </header>
+      <!--================Header Area =================-->
+      <header class="header_area">
+          <nav class="navbar navbar-expand-lg navbar-light" style="margin-top:50px;">
+              <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <a class="navbar-brand logo_h"  href="index"><img src="image/Logo.png" alt="" width="175" height="40"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                      <ul class="nav navbar-nav menu_nav ml-auto">
+                          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                          <li class="nav-item"><a class="nav-link" href="our-mission">Our Mission</a></li>
+                          <li class="nav-item"><a class="nav-link" href="event">Events</a></li>
+                          <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+                          <li class="nav-item"><a class="nav-link" href="about-us">Our Staff</a></li>
+                          <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
+                          <li class="nav-item"><a class="nav-link" href="partners">Partners</a></li>
+                          <li class="nav-item submenu dropdown active">
+                               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Classroom</a>
+                               <ul class="dropdown-menu">
+                                   <li class="nav-item"><a class="nav-link" href="classroom/cc/crash-course.html">Crash Course</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="classroom/cc/advanced-concepts.html">Advanced</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="classroom/ml/machine-learning.html">Machine Learning</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="resources">Resources</a></li>
+                               </ul>
+                           </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>
         <!--================Header Area =================-->
-        
+
         <!--================Breadcrumb Area =================-->
         <section class="breadcrumb_area br_image">
             <div class="container">
@@ -66,150 +72,139 @@
                 </div>
             </div>
         </section>
-        <!--================Breadcrumb Area =================-->     
-        
+        <!--================Breadcrumb Area =================-->
+
         <!--================About Area =================-->
         <section class="about_area section_gap">
             <div class="container">
+              <div class="ShowHide" id="Bar">
+                <h2 id="announce">Announcement</h2>
+                <div id="right">
+                  <a href="#" onclick="Hide(left);">X</a>
+                </div>
+                <div id="left">
+                  <p style="font-size:110%;"> As we monitor the spread of the coronavirus (COVID-19), health and safety is our top priority. We are currently in the process of redesigning our program
+                    so that it can take place virtually. Please subscribe to the newsletter to get up-to-date information about changes that are made to the program. </p>
+              </div>
+            </div>
+            <div><p></P></div>
                 <div class="section_title text-center">
-                    <h2>Welcome to Def Include()</h2>
-                    <p>Summer camp for middle school girls who enjoy coding</p>
+                    <h2 style="color:#777">Welcome to </h2><img src="image/Logo.png" alt="logo" class="index_logo">
                 </div>
                 <div class="row">
                     <div class="col-md-6 d_flex">
                         <div class="about_content flex">
-                            <h3 class="title_color">Our Mission</h3>
-                            <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
-                            <a href="#" class="about_btn btn_hover">Read Full Story</a>
+                            <h2 class="title_color" style="color:#95BFB1">Our Mission</h2>
+                            <p>Our mission is to support young women in furthering their interest and knowledge in computer science through engaging activities and empowerment. Since 1984, the number of women pursuing a degree in computer science has decreased from 37% to 18% and only 24% of the industry is women. Lots of initiatives and programs have started with the goal of raising those numbers, but haven’t had the results they desired.</p>
+                            <a href="our-mission" class="about_btn btn_hover">Read Full Story</a>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="image/about.jpg" alt="abou_img">
+                        <img src="image/group-of-computers.png" alt="abou_img">
                     </div>
                 </div>
             </div>
         </section>
         <!--================About Area =================-->
-        
+
         <!--================Features Area =================-->
         <section class="features_area">
-            <div class="row m0">
-                <div class="col-md-3 features_item">
-                    <h3>Calendar</h3>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from innocence and upturning of the natural.</p>
-                    <a href="#" class="btn_hover view_btn">View Details</a>
+            <div class="row m0 left_item">
+                <div class="col-md-6 features_item">
+                    <center><h3 class="special_mobile_css">Calendar</h3></center>
+                    <center><a href="event" class="btn_hover view_btn special_mobile_css">View Details</a></center>
                 </div>
-                <div class="col-md-3 features_item">
-                    <h3>FAQ</h3>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from innocence and upturning of the natural.</p>
-                    <a href="#" class="btn_hover view_btn">View Details</a>
+                <div class="col-md-6 features_item" style="background-image: url('image/girls-computer-1.jpg');">
+                    <center><h3 class="special_mobile_css" style="color: white; background-color:rgba(238,130,127,0.75); width:160px; ">FAQ</h3></center>
+                    <center><a href="faq" class="btn_hover view_btn special_mobile_css">View Details</a></center>
                 </div>
-                <div class="col-md-3 features_item">
-                    <h3>Contact Us</h3>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from innocence and upturning of the natural.</p>
-                    <a href="#" class="btn_hover view_btn">View Details</a>
+                <div class="col-md-6 features_item" style="background-image: url('image/girls-computer-2.jpg'); width=100%">
+                    <center><h3 class="special_mobile_css" style="color: white; background-color:rgba(238,130,127,0.75); width:160px; ">Contact Us</h3></center>
+                    <center><a href="contact" class="btn_hover view_btn special_mobile_css" >View Details</a></center>
                 </div>
-                <div class="col-md-3 features_item">
-                    <h3>Our Staff</h3>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from innocence and upturning of the natural.</p>
-                    <a href="#" class="btn_hover view_btn">View Details</a>
+                <div class="col-md-6 features_item">
+                    <center><h3 class="special_mobile_css">Our Staff</h3></center>
+                    <center><a href="about-us" class="btn_hover view_btn special_mobile_css">View Details</a></center>
                 </div>
             </div>
         </section>
         <!--================Features Area =================-->
-        
+
         <!--================Event Blog Area=================-->
         <section class="event_blog_area section_gap">
             <div class="container">
                 <div class="section_title text-center">
-                    <h2>Upcoming Events</h2>
-                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast</p>
+                    <h2 style="color:#95BFB1">Upcoming Events</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="event_post">
-                            <img src="image/blog1.jpg" alt="">
-                            <a href="#"><h2 class="event_title">Spreading Peace to world</h2></a>
-                            <ul class="list_style sermons_category event_category">
-                                <li><i class="lnr lnr-user"></i>Saturday, 5th may, 2018</li>
-                                <li><i class="lnr lnr-apartment"></i>Rocky beach Church</li>
-                                <li><i class="lnr lnr-location"></i>Santa monica, Los Angeles, USA</li>
-                            </ul>
-                            <a href="#" class="btn_hover">View Details</a>
+                <div class="row event_two">
+                        <div class="col-lg-4 col-sm-6"  style="display: flex; justify-content: center;">
+                            <div class="event_post">
+                                <a href="event"><h2 class="index_title">Crash Course on Python</h2></a>
+                                <h4 style = "text-align: center">June 13-June 21</h2>
+                              <!--  <center><a href="about-us" class="btn_hover view_btn special_mobile_css">View Details</a></center> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6"  style="display: flex; justify-content: center;">
+                            <div class="event_post">
+                                <a href="event"><h2 class="index_title">Advanced Concepts in Python</h2></a>
+                                <h4 style = "text-align: center">June 27-July 12</h2>
+                              <!--  <center><a href="about-us" class="btn_hover view_btn special_mobile_css">View Details</a></center> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6"  style="display: flex; justify-content: center;">
+                            <div class="event_post">
+                                <a href="event"><h2 class="index_title">Machine Learning in Python</h2></a>
+                                <h4 style = "text-align: center">July 25-August 9</h2>
+                              <!--  <center><a href="about-us" class="btn_hover view_btn special_mobile_css">View Details</a></center> -->
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="event_post">
-                            <img src="image/blog2.jpg" alt="">
-                            <a href="#"><h2 class="event_title">Spread Happyness to world</h2></a>
-                            <ul class="list_style sermons_category event_category">
-                                <li><i class="lnr lnr-user"></i>Saturday, 5th may, 2018</li>
-                                <li><i class="lnr lnr-apartment"></i>Rocky beach Church</li>
-                                <li><i class="lnr lnr-location"></i>Santa monica, Los Angeles, USA</li>
-                            </ul>
-                            <a href="#" class="btn_hover">View Details</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="event_post">
-                            <img src="image/blog3.jpg" alt="">
-                            <a href="#"><h2 class="event_title">Spreading Light to world</h2></a>
-                            <ul class="list_style sermons_category event_category">
-                                <li><i class="lnr lnr-user"></i>Saturday, 5th may, 2018</li>
-                                <li><i class="lnr lnr-apartment"></i>Rocky beach Church</li>
-                                <li><i class="lnr lnr-location"></i>Santa monica, Los Angeles, USA</li>
-                            </ul>
-                            <a href="#" class="btn_hover">View Details</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!--================Blog Area=================-->
-        
-        
-        <!--================ start footer Area  =================-->	
-   <footer class="footer-bs">
-        <div class="row">
-        	<div class="col-md-4 footer-brand animated fadeInLeft">
-            	<h2>def include( )</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-            </div>
-        	<div class="col-md-4 footer-nav animated fadeInUp">
 
-            	<div class="col-md-4">
-                    <ul class="pages">
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Resources</a></li>
-                    </ul>
-                </div>
-            	<div class="col-md-4">
-                    <ul class="list">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Get Involved</a></li>
-                    </ul>
-                </div>
-</div>
 
-        	<div class="col-md-4 footer-ns animated fadeInRight">
-            	<h4>Newsletter</h4>
-                <p>Subscribe to emails about upcoming events</p>
-                <p>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Email">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                      </span>
-                    </div><!-- /input-group -->
-                 </p>
-            </div>
+        <!--================ start footer Area  =================-->
+        <footer class="footer-bs">
+             <div class="row">
+             	<div class="col-md-4 footer-brand animated fadeInLeft">
+                 	<h2 style="color:white; font-weight: bold; font-size:200%">def include( )</h2>
+                     <p>A summer program for middle school girls to gain new skills in various computer science topics.</p>
+                 </div>
+             	<div class="col-md-4 footer-nav animated fadeInUp">
 
-        </div>
+                 	<div class="col-md-4">
+                         <ul class="pages">
+                             <li><a href="our-mission">Our Mission</a></li>
+                             <li><a href="event">Calendar</a></li>
+                             <li><a href="resources">Resources</a></li>
+                         </ul>
+                     </div>
+                 	<div class="col-md-4">
+                         <ul class="list">
+                             <li><a href="about-us">About Us</a></li>
+                             <li><a href="contact">Get Involved</a></li>
+                         </ul>
+                     </div>
+     </div>
 
-    </footer>
-		<!--================ End footer Area  =================-->        
-        
+             	<div class="col-md-4 footer-ns animated fadeInRight">
+                 	<h4 style="color:white; font-weight: bold;">Newsletter</h4>
+                     <p>Subscribe to emails about upcoming events</p>
+                     <p>
+                       <form name="submit-to-google-sheet" class="input-group">
+                         <input type="email" class="form-control" name="email" placeholder="Email">
+                         <span class="input-group-btn">
+                           <button class="btn btn-default" id="submit-form" type="submit"><div class="glyphicon glyphicon-envelope"></div></button>
+                         </span></form>
+                         <p id="email-conf"><br>Thanks for subscribing!</p>
+                       </div><!-- /input-group -->
+                 </div>
+
+         </footer>
+		<!--================ End footer Area  =================-->
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -224,5 +219,32 @@
         <script src="vendors/flipclock/timer.js"></script>
         <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxY_U44D0S3VHyvYlTKxDpwsdP2xliioHcufUcEZnxaei-ehnYL/exec"
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+           e.preventDefault()
+           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+             .then(document.getElementById("email-conf").removeAttribute("id"))
+             .catch(error => console.error('Error!', error.message))
+         })
+
+         function Show(ShowID)
+         {
+           ShowID.style.display = "inline";
+           document.querySelector("#right > a").innerHTML = "X";
+           document.querySelector("#right > a").style.fontSize = "14px";
+           document.querySelector("#right > a").setAttribute("onclick", "Hide(left);");
+         }
+
+         function Hide(HideID)
+        {
+          HideID.style.display = "none";
+          document.querySelector("#right > a").innerHTML = "+";
+          document.querySelector("#right > a").style.fontSize = "22px";
+          document.querySelector("#right > a").setAttribute("onclick", "Show(left);");
+        }
+         </script>
     </body>
 </html>

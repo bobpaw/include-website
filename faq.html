@@ -1,4 +1,4 @@
-﻿﻿<!doctype html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -8,6 +8,7 @@
         <title>Define Include</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
@@ -16,48 +17,53 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166889026-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
+          gtag('config', 'UA-166889026-1');
+        </script>
     </head>
     <body>
-       <!--================Header Area =================-->
-        <header class="header_area">
-            <div class="header_top">
-                <div class="container">
-                        <div class="col-sm-12 col-2">
-                            <div class="top_btn d-flex justify-content-end">
-                                <a href="#">Donate Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt="" width="175" height="125"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="ministries.html">Our Mission</a></li>
-                            <li class="nav-item"><a class="nav-link" href="event.html">Calendar</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Get Involved</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Our Staff</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-			    <li class="nav-item"><a class="nav-link" href="contact.html">Resources</a></li>
-                        </ul>
-                    </div> 
-                </div>
-            </nav>
-        </header>
+      <!--================Header Area =================-->
+      <header class="header_area">
+          <nav class="navbar navbar-expand-lg navbar-light" style="margin-top:50px;">
+              <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <a class="navbar-brand logo_h"  href="index"><img src="image/Logo.png" alt="" width="175" height="40"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                      <ul class="nav navbar-nav menu_nav ml-auto">
+                          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                          <li class="nav-item"><a class="nav-link" href="our-mission">Our Mission</a></li>
+                          <li class="nav-item"><a class="nav-link" href="event">Events</a></li>
+                          <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+                          <li class="nav-item"><a class="nav-link" href="about-us">Our Staff</a></li>
+                          <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
+                          <li class="nav-item"><a class="nav-link" href="partners">Partners</a></li>
+                          <li class="nav-item submenu dropdown active">
+                               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Classroom</a>
+                               <ul class="dropdown-menu">
+                                   <li class="nav-item"><a class="nav-link" href="classroom/cc/crash-course.html">Crash Course</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="classroom/cc/advanced-concepts.html">Advanced</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="classroom/ml/machine-learning.html">Machine Learning</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="resources">Resources</a></li>
+                               </ul>
+                           </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>
         <!--================Header Area =================-->
-        
+
         <!--================Breadcrumb Area =================-->
         <section class="breadcrumb_area br_image">
             <div class="container">
@@ -70,112 +76,112 @@
 <section class="event_blog_area section_gap">
             <div class="container">
 <div>
-<p>                     
+<p>
 
 </p>
 </div>
   <div id="preguntas">
     <div id="header">
 
+    <h3 class="faqq">How does the program work?</h3>
+    <div class="respuesta">
+        <p class="faqp">Each session will contain a mixture of synchronous and asynchronous classes. There will be a two-hour live lesson on Saturday and Sunday
+        and then daily coding assignments during the week. The assignment details will be posted on the website and office hours will be provided during the week to provide
+      support. Instructors will also be accessible by Slack or email. Students will turn in the projects online and receive individual feedback from the instructors.</p>
+    </div>
     <h3 class="faqq">Is this program only for girls with experience programming?</h3>
     <div class="respuesta">
-      <p class="faqp">No. Although the goal of this program is to provide support above the beginner level, every session has multiple options for different 
+      <p class="faqp">No. Although the goal of this program is to provide support above the beginner level, every session has multiple options for different
 	skill levels so we are beginner friendly! If you have any concerns about whether you are right for the program, send us an email.</p>
     </div>
     <h3 class="faqq">What does the program cost?</h3>
     <div class="respuesta">
       <p class="faqp">The program is 100% free. </p>
     </div>
-    <h3 class="faqq">Do I have to go to every session?</h3>
+    <h3 class="faqq">Do I have to sign up for every session?</h3>
     <div class="respuesta">
-      <p class="faqp">No. We understand that everyone’s summer schedules are irregular. Our sessions are designed to stand on their own 
-	unless stated otherwise in the event description page. We encourage you to come to as many as you can, though.</p>
+      <p class="faqp">No. We understand that everyone’s summer schedules are irregular. Our events are designed to stand on their own.
+        We encourage you to sign up for as many as you can.</p>
     </div>
-    <h3 class="faqq">Is this program only for middle school girls?</h3>
+    <h3 class="faqq">Is this program only for middle school and high school girls?</h3>
     <div class="respuesta">
-      <p class="faqp">No. While this program is targeted towards middle school girls, if you are interested in participating but not in middle school, just shoot 
-	us an email to let us know. Everyone is welcome to join!</p>
+      <p class="faqp">No. If you are interested in participating but not in middle school or high school, just send
+	       us an email to let us know. Everyone is welcome to join!</p>
     </div>
     <h3 class="faqq">Do I need to have my own laptop?</h3>
     <div class="respuesta">
-      <p class="faqp">No. We have some laptops that we will provide to anyone who needs them. Just indicate when you RSVP that you need a laptop so we can 
-	make sure we have enough.</p>
+      <p class="faqp">No. We have laptops that we will provide to anyone who needs them. The laptops will be lent out for the period of the session and
+      returned at the end. For more information regarding borrowing a laptop, contact us. </p>
     </div>
-    <h3 class="faqq">Can I bring my own laptop?</h3>
+    <h3 class="faqq">Can I use my own laptop?</h3>
     <div class="respuesta">
-      <p class="faqp">Yes, that is prefered so laptops can go to those who need them. Just make sure you download all the requirements for that day’s session 
-	before arrival so we don’t have to spend time on that. If you need help downloading programs or libraries, send us an email and we can help you out!</p>
-    </div>
-    <h3 class="faqq">What if I can’t get transportation to the session?</h3>
-    <div class="respuesta">
-      <p class="faqp">Transportation should never be a barrier for learning. If you cannot get to the session, send us an email and we will provide everything 
-	you need to do the lab.</p>
+      <p class="faqp">Yes, that is prefered so laptops can go to those who need them. You will need a laptop that can download software.
+        If you need help downloading programs or libraries, send us an email and we can help you out!</p>
     </div>
     <h3 class="faqq">How can I improve my skills?</h3>
     <div class="respuesta">
       <p class="faqp">Check out our resources page to find our favorite websites and free courses on a variety of different CS-related skills.</p>
     </div>
-    <h3 class="faqq">What do the donations go towards?</h3>
+    <h3 class="faqq">Why are the classroom pages password-protected?</h3>
     <div class="respuesta">
-      <p class="faqp">We use the donated money to go towards website hosting and purchasing laptops and tech supplies for our sessions. The program is not for-profit
-	 and every session is free. Thank you so much for your donations!</p>
+      <p class="faqp">We will be posting links to Zoom meetings and our Slack on the class pages so to keep our students safe and our links secure, we decided
+      to lock the class pages. Usernames and passwords will be sent to students that have signed up through email. After the class is done, we intend to remove the
+    links and unlock the pages for public use.</p>
     </div>
     <h3 class="faqq">If I’m a high school girl and I’m passionate about computer science, can I help out with the sessions?</h3>
     <div class="respuesta">
       <p class="faqp">Yes! We’d love to have more members on our team. If you are interested in volunteering with us, send us an email!</p>
-    </div>	
+    </div>
 
-<div>   
-<p>                     
+<div>
+<p>
 
 </p>
 </div>
 </div>
 </section>
-        
-        <!--================ start footer Area  =================-->	
-   <footer class="footer-bs">
-        <div class="row">
-        	<div class="col-md-4 footer-brand animated fadeInLeft">
-            	<h2>def include( )</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-            </div>
-        	<div class="col-md-4 footer-nav animated fadeInUp">
 
-            	<div class="col-md-4">
-                    <ul class="pages">
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Resources</a></li>
-                    </ul>
-                </div>
-            	<div class="col-md-4">
-                    <ul class="list">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Get Involved</a></li>
-                    </ul>
-                </div>
-</div>
+        <!--================ start footer Area  =================-->
+        <footer class="footer-bs">
+             <div class="row">
+              <div class="col-md-4 footer-brand animated fadeInLeft">
+                  <h2 style="color:white; font-weight: bold; font-size:200%">def include( )</h2>
+                     <p>A summer program for middle school girls to gain new skills in various computer science topics.</p>
+                 </div>
+              <div class="col-md-4 footer-nav animated fadeInUp">
 
-        	<div class="col-md-4 footer-ns animated fadeInRight">
-            	<h4>Newsletter</h4>
-                <p>Subscribe to emails about upcoming events</p>
-                <p>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Email">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                      </span>
-                    </div><!-- /input-group -->
-                 </p>
-            </div>
+                  <div class="col-md-4">
+                         <ul class="pages">
+                             <li><a href="our-mission">Our Mission</a></li>
+                             <li><a href="event">Calendar</a></li>
+                             <li><a href="resources">Resources</a></li>
+                         </ul>
+                     </div>
+                  <div class="col-md-4">
+                         <ul class="list">
+                             <li><a href="about-us">About Us</a></li>
+                             <li><a href="contact">Get Involved</a></li>
+                         </ul>
+                     </div>
+     </div>
 
-        </div>
+              <div class="col-md-4 footer-ns animated fadeInRight">
+                  <h4 style="color:white; font-weight: bold;">Newsletter</h4>
+                     <p>Subscribe to emails about upcoming events</p>
+                     <p>
+                       <form name="submit-to-google-sheet" class="input-group">
+                         <input type="email" class="form-control" name="email" placeholder="Email">
+                         <span class="input-group-btn">
+                           <button class="btn btn-default" id="submit-form" type="submit"><div class="glyphicon glyphicon-envelope"></div></button>
+                         </span></form>
+                         <p id="email-conf"><br>Thanks for subscribing!</p>
+                       </div><!-- /input-group -->
+                 </div>
 
-    </footer>
+         </footer>
 		<!--================ End footer Area  =================-->
-        
-        
+
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -188,7 +194,9 @@
         <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
         <script src="js/stellar.js"></script>
         <script src="js/custom.js"></script>
+
 <script>
+
 var clics = 0;
 
 $(document).ready(function() {
@@ -197,7 +205,7 @@ $(document).ready(function() {
   $('#cerrartodas').hide();
 
   $('h3.faqq').click(function() {
-    
+
     $(this).next('.respuesta').toggle(function() {
 
       $(this).next('.respuesta');
@@ -223,7 +231,7 @@ $(document).ready(function() {
       var abiertas = $('.cerrar').length
       console.log(abiertas);
     }
-  }); //Close Function Click	            
+  }); //Close Function Click
 
 }); //Close Function Ready
 
@@ -232,88 +240,18 @@ $('#cerrartodas').click(function() {
   $('h3').removeClass('cerrar');
   $('#cerrartodas').fadeOut('fast');
 });
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxY_U44D0S3VHyvYlTKxDpwsdP2xliioHcufUcEZnxaei-ehnYL/exec"
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+     .then(document.getElementById("email-conf").removeAttribute("id"))
+     .catch(error => console.error('Error!', error.message))
+ })
+
 </script>
-<style>
-
-p.faqp {
-	padding: 20px;
-	font-size: 16px;	
-}
-
-h3.faqq {
-	color: #EE827F;
-	cursor: pointer;
-	-moz-transition: all 0.35s ease;
-	-ms-transition: all 0.35s ease;
-	-o-transition: all 0.35s ease;
-	-webkit-transition: all 0.35s ease;
-	margin: 0;
-	padding: 18px 15px;
-	transition: all 0.35s ease;
-        font-weight: 500;
-		
-}
-
-h3.cerrar {
-	cursor: pointer;
-	
-	&::after {
-		content: "\2715";
-		float: right;
-		font-size: 11px;
-		font-weight: 300;
-		line-height: 30px;
-	}
-	
-	&::before {
-		-moz-transform: rotate(-90deg)!important;
-		-ms-transform: rotate(-90deg)!important;
-		-o-transform: rotate(-90deg)!important;
-		-webkit-transform: rotate(-90deg)!important;
-		transform: rotate(-90deg)!important;
-	}
-}
-
-
-h3:hover {
-	&::before {
-		opacity: 0.55;
-		-moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-webkit-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
-}
-
-div.respuesta {
-	background: lighten(#3D9970, 2%);
-	margin-bottom: 20px;
-  	line-height: 1.8em;
-}	
-
-
-#preguntas {
-	margin: 40px auto 0;
-  	padding: 0 5%;
-}
-
-#cerrartodas {
-	background-color:@color2;
-	bottom: 30px;
-	color: lighten(#3D9970, 100%);
-	font-size: 14px;
-	padding: 5px 10px;
-	position: fixed;
-	right: 10%;
-	text-decoration: none;
-	z-index: 1;
-}
-
-
-
-</style>
-
 
 </body>
 </html>
