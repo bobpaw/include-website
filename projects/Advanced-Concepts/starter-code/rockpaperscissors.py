@@ -1,10 +1,10 @@
 import random
 import tkinter
 
-
+win = 0
 
 def get_winner(call):
-    #global wins, win, output
+    global wins, win, output
     comp_call = random.randint(1,3)
     print(comp_call)
     if comp_call == 1:
@@ -34,8 +34,6 @@ def pass_p():
     get_winner("paper")
 
 window = tkinter.Tk()
-
-win = 0
 
 scissors = tkinter.Button(window, text = "Scissors", bg = "#ff9999", padx=10, pady=5, command=pass_s, width=20)
 rock = tkinter.Button(window, text = "Rock", bg = "#80ff80", padx=10, pady=5, command=pass_r, width=20)
