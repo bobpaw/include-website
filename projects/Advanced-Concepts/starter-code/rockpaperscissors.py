@@ -1,31 +1,28 @@
 import random
 import tkinter
 
-win = 0
-
+#NOTE: A function that determines whether the user wins or not
+#      Passes the user's choice (based on what button they click)to the parameter
 def get_winner(call):
+
+    # Access variables declared after the function so that the variables can be changed inside of the function
     global wins, win, output
-    comp_call = random.randint(1,3)
-    print(comp_call)
-    if comp_call == 1:
-        throw = "rock"
-    elif comp_call == 2:
-        throw = "scissors"
-    else:
-        throw = "paper"
 
-    if (throw == "rock" and call == "paper") or (throw == "paper" and call == "scissors") or (throw == "scissors" and call == "rock"):
-        result = "You won!"
-        win+=1
-    elif throw == call:
-        result = "It's a draw"
-    else:
-        result = "You lost!"
+    # 1. Create random integer 1-3 to use as computer's play
 
-    output.config(text=f"Computer did: {throw} \n {result}")
-    wins.config(text=f"Wins: {win}")
+    # 2. Using if-statements, assign the computer to a choice (rock, paper, scissors) using the random integer generated
+
+    # 3. Determine the winner based on what the user chose and what the computer chose 
+    #   Rock beats Scissors
+    #   Paper beats Rock
+    #   Scissors beats Paper
+    #   It's a tie if the computer and user chose the same object
+
+    # If the user wins, increase win by 1
+    # Use the output label to write what the computer did and what the result was (win, loss, tie)
 
 
+# Use these functions as "command" for each button
 def pass_s():
     get_winner("scissors")
 def pass_r():
@@ -35,15 +32,16 @@ def pass_p():
 
 window = tkinter.Tk()
 
-scissors = tkinter.Button(window, text = "Scissors", bg = "#ff9999", padx=10, pady=5, command=pass_s, width=20)
-rock = tkinter.Button(window, text = "Rock", bg = "#80ff80", padx=10, pady=5, command=pass_r, width=20)
-paper = tkinter.Button(window, text = "Paper", bg = "#3399ff", padx=10, pady=5, command=pass_p, width=20)
-output = tkinter.Label(window, width=20, fg = "red", text="What's your call?")
-wins = tkinter.Label(window, width = 20, fg="black", text="Wins:0")
+#Variable to count the number of wins the user gets
+win = 0
 
-scissors.grid(row=0, column=0)
-rock.grid(row=0, column=1)
-paper.grid(row=0, column=2)
-output.grid(row=1, column=0)
-wins.grid(row=1, column=2)
+
+#START CODING HERE
+
+# 1. Create 3 buttons for each option (rock, paper, scissors)
+
+# 2. Create 2 labels for the result and the number of wins
+
+# 3. Arrange the buttons and labels using grid
+
 window.mainloop()
