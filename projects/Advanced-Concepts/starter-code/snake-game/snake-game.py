@@ -31,45 +31,48 @@ snake_speed = 15
 font_style = pygame.font.SysFont("bahnschrift", 25)
 score_font = pygame.font.SysFont("bahnschrift", 35)
 
-
+# A function to display the score of the player on the screen
 def Your_score(score):
     value = score_font.render("Your Score: " + str(score), True, yellow)
     dis.blit(value, [0, 0])
 
-
-
+# A function to draw the snake on the screen
+# Draws a rectangle at every position in snake_list of size snake_block
 def our_snake(snake_block, snake_list):
     for x in snake_list:
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
 
-
+# A function to display messages
 def message(msg, color):
     mesg = font_style.render(msg, True, color)
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
 
-
+# The main function of the game
 def gameLoop():
     game_over = False
     game_close = False
 
-    x1 = dis_width / 2
-    y1 = dis_height / 2
+    # START CODING HERE
 
-    x1_change = 0
-    y1_change = 0
+    # 1. Set x1 and y1 (the position of the block) to the center of the screen
 
+    # 2. Set x1_change and y1_change to 0 since the snake isn't moving yet
+
+    # A list that will change as the snake gets bigger
     snake_List = []
-    Length_of_snake = 1
+    # Sets the initial length of the snake to 1
+    snake_length = 1
 
-    foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
-    foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+    #Position the food (foodx, foody) to a random location
 
+    #While the game is not over
     while not game_over:
 
+        # A loop to determines what happens after the player loses
         while game_close == True:
             dis.fill(blue)
             message("You Lost! Press C-Play Again or Q-Quit", red)
-            Your_score(Length_of_snake - 1)
+            Your_score(snake_length - 1)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -80,49 +83,49 @@ def gameLoop():
                     if event.key == pygame.K_c:
                         gameLoop()
 
+        # START CODING HERE
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game_over = True
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    x1_change = -snake_block
-                    y1_change = 0
-                elif event.key == pygame.K_RIGHT:
-                    x1_change = snake_block
-                    y1_change = 0
-                elif event.key == pygame.K_UP:
-                    y1_change = -snake_block
-                    x1_change = 0
-                elif event.key == pygame.K_DOWN:
-                    y1_change = snake_block
-                    x1_change = 0
 
-        if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-            game_close = True
-        x1 += x1_change
-        y1 += y1_change
+            # If the user presses an arrow key
+            if event.type == pygame.KEYDOWN:
+
+                # 3. Create if-statements that determine how the position of the snake
+                #   changes depending on which arrow key is pressed
+                #   Hint: Change the variables x1_change and y1_change
+
+        # 4. Check if the position of x1 or y1 is outside of the display
+
+        # 5. Add the change of the position to the position
+
         dis.fill(blue)
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
-        snake_Head = []
-        snake_Head.append(x1)
-        snake_Head.append(y1)
-        snake_List.append(snake_Head)
-        if len(snake_List) > Length_of_snake:
-            del snake_List[0]
 
-        for x in snake_List[:-1]:
-            if x == snake_Head:
-                game_close = True
+        # 6. Create a list for the current position of the snake
+
+        # 7. Append the current position of the snake to the snake
+
+        # 8. Add the new list to snake_List
+
+        # 9. If the length of snake_List is bigger than the snake_length,
+        #   delete the first index of snake_List
+        #   NOTE: You want to do this because you want snake_List to only contain
+        #       lists of positions on the display that your snake is occupying.
+        #       So you're deleting positions your snake has moved off of
+        #       (which would be the oldest entry)
+
+        # 10. Check if any part of your snake is touching any other part of your snake
+        #   If so, end the game
 
         our_snake(snake_block, snake_List)
-        Your_score(Length_of_snake - 1)
+        Your_score(snake_length - 1)
 
         pygame.display.update()
 
-        if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
-            foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
-            Length_of_snake += 1
+        # 11. Check if the position of the snake's head matches the position of the food
+        #   If so, randomly generate a new food item
+        #   And increase the length of the snake by 1
 
         clock.tick(snake_speed)
 
