@@ -36,7 +36,7 @@ DIRECTORIES = {
 
 #The path of the directory to be sorted
 #edit this to where you placed your test-file folder
-path = 'C:\\Users\\<USERNAME>\\Downloads\\test-file'
+path = '<YOUR_PATH>'
 
 #Creates a list with the filenames in the directory
 list_ = os.listdir(path)

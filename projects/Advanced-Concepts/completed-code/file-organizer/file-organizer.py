@@ -29,7 +29,7 @@ DIRECTORIES = {
 }
 
 #The Path of the directory to be sorted
-path = 'C:\\Users\\adiso\\Downloads\\test-file-copy'
+path = '<YOUR_PATH>'
 #This populates a list with the filenames in the directory
 list_ = os.listdir(path)
 
