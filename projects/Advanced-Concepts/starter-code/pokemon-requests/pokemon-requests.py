@@ -28,5 +28,5 @@ import json
     # 10. Append a dictionary to the list with the name
     #     and the ability of the pokemon
 
-    # 11. Loop through your list and print the name of the
-    #     pokemon and their ability
+# 11. Loop through your list and print the name of the
+#     pokemon and their ability
