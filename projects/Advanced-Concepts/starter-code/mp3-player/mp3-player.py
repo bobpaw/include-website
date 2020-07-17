@@ -35,36 +35,36 @@ class MusicPlayer:
     #   be "Playing"
 
     # Creates a track frame for song label & status label
-    trackframe = LabelFrame(self.root,text="Song Track",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=GROOVE)
+    trackframe = tk.LabelFrame(self.root,text="Song Track",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=tk.GROOVE)
     trackframe.place(x=0,y=0,width=600,height=100)
     # Inserts song track label
-    songtrack = Label(trackframe,textvariable=self.track,width=20,font=("times new roman",24,"bold"),bg="grey",fg="gold").grid(row=0,column=0,padx=10,pady=5)
+    songtrack = tk.Label(trackframe,textvariable=self.track,width=20,font=("times new roman",24,"bold"),bg="grey",fg="gold").grid(row=0,column=0,padx=10,pady=5)
     # Inserts status label
-    trackstatus = Label(trackframe,textvariable=self.status,font=("times new roman",24,"bold"),bg="grey",fg="gold").grid(row=0,column=1,padx=10,pady=5)
+    trackstatus = tk.Label(trackframe,textvariable=self.status,font=("times new roman",24,"bold"),bg="grey",fg="gold").grid(row=0,column=1,padx=10,pady=5)
     # creating button frame
-    buttonframe = LabelFrame(self.root,text="Control Panel",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=GROOVE)
+    buttonframe = tk.LabelFrame(self.root,text="Control Panel",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=tk.GROOVE)
     buttonframe.place(x=0,y=100,width=600,height=100)
 
     # Inserts play button
-    playbtn = Button(buttonframe,text="PLAY",command=self.playsong,width=6,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=0,padx=10,pady=5)
+    playbtn = tk.Button(buttonframe,text="PLAY",command=self.playsong,width=6,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=0,padx=10,pady=5)
     # Inserts pause button
-    playbtn = Button(buttonframe,text="PAUSE",command=self.pausesong,width=8,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=1,padx=10,pady=5)
+    playbtn = tk.Button(buttonframe,text="PAUSE",command=self.pausesong,width=8,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=1,padx=10,pady=5)
     # Inserts unpause button
-    playbtn = Button(buttonframe,text="UNPAUSE",command=self.unpausesong,width=10,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=2,padx=10,pady=5)
+    playbtn = tk.Button(buttonframe,text="UNPAUSE",command=self.unpausesong,width=10,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=2,padx=10,pady=5)
     # Inserts stop button
-    playbtn = Button(buttonframe,text="STOP",command=self.stopsong,width=6,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=3,padx=10,pady=5)
+    playbtn = tk.Button(buttonframe,text="STOP",command=self.stopsong,width=6,height=1,font=("times new roman",16,"bold"),fg="navyblue",bg="gold").grid(row=0,column=3,padx=10,pady=5)
 
     # Creates playlist frame
-    songsframe = LabelFrame(self.root,text="Song Playlist",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=GROOVE)
+    songsframe = tk.LabelFrame(self.root,text="Song Playlist",font=("times new roman",15,"bold"),bg="grey",fg="white",bd=5,relief=tk.GROOVE)
     songsframe.place(x=600,y=0,width=400,height=200)
     # Inserts scrollbar
-    scrol_y = Scrollbar(songsframe,orient=VERTICAL)
+    scrol_y = tk.Scrollbar(songsframe,orient=tk.VERTICAL)
     # Inserts playlist listbox
-    self.playlist = Listbox(songsframe,yscrollcommand=scrol_y.set,selectbackground="gold",selectmode=SINGLE,font=("times new roman",12,"bold"),bg="silver",fg="navyblue",bd=5,relief=GROOVE)
+    self.playlist = tk.Listbox(songsframe,yscrollcommand=scrol_y.set,selectbackground="gold",selectmode=tk.SINGLE,font=("times new roman",12,"bold"),bg="silver",fg="navyblue",bd=5,relief=tk.GROOVE)
     # Applies scrollbar to listbox
-    scrol_y.pack(side=RIGHT,fill=Y)
+    scrol_y.pack(side=tk.RIGHT,fill=tk.Y)
     scrol_y.config(command=self.playlist.yview)
-    self.playlist.pack(fill=BOTH)
+    self.playlist.pack(fill=tk.BOTH)
 
     # 5. Paste the path to the music directory here
     os.chdir("<YOUR_PATH_TO_MUSIC")
@@ -79,7 +79,7 @@ class MusicPlayer:
   def playsong(self):
 
     # Sets track to the selected track
-    self.track = self.playlist.get(ACTIVE)
+    self.track = self.playlist.get(tk.ACTIVE)
 
     # 8. Set status to "Playing"
 
@@ -109,7 +109,7 @@ class MusicPlayer:
     # 16. Unpause music
 
 # Creating TK Container
-root = Tk()
+root = tk.Tk()
 # Passing Root to MusicPlayer Class
 MusicPlayer(root)
 # Root Window Looping

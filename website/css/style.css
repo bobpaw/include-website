@@ -506,7 +506,11 @@ h3 {
 
 
 .features_item {
-  padding: 73px 45px 80px 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #fff;
   background: #EE827F;
   border: 1px solid #fff;

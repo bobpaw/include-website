@@ -1,182 +1,358 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>Define Include</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166889026-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="image/favicon.png" type="image/png" />
+    <title>Define Include</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-166889026-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          gtag('config', 'UA-166889026-1');
-        </script>
+      gtag("config", "UA-166889026-1");
+    </script>
+  </head>
+  <body>
+    <!--================Header Area =================-->
+    <header class="header_area">
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="margin-top:50px;"
+      >
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index"
+            ><img src="image/Logo.png" alt="" width="175" height="40"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse offset"
+            id="navbarSupportedContent"
+          >
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="our-mission">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="event">Events</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us">Our Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="partners">Partners</a>
+              </li>
+              <li class="nav-item submenu dropdown active">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color:black"
+                  >Classroom</a
+                >
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/cc/crash-course"
+                      >Crash Course</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/ac/advanced-concepts"
+                      >Advanced</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/ml/machine-learning"
+                      >Machine Learning</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resources">Resources</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    </head>
-    <body>
-      <!--================Header Area =================-->
-      <header class="header_area">
-          <nav class="navbar navbar-expand-lg navbar-light" style="margin-top:50px;">
-              <div class="container">
-                  <!-- Brand and toggle get grouped for better mobile display -->
-                  <a class="navbar-brand logo_h"  href="index"><img src="image/Logo.png" alt="" width="175" height="40"></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                      <ul class="nav navbar-nav menu_nav ml-auto">
-                          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
-                          <li class="nav-item"><a class="nav-link" href="our-mission">Our Mission</a></li>
-                          <li class="nav-item"><a class="nav-link" href="event">Events</a></li>
-                          <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
-                          <li class="nav-item"><a class="nav-link" href="about-us">Our Staff</a></li>
-                          <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
-                          <li class="nav-item"><a class="nav-link" href="partners">Partners</a></li>
-                          <li class="nav-item submenu dropdown active">
-                               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Classroom</a>
-                               <ul class="dropdown-menu">
-                                   <li class="nav-item"><a class="nav-link" href="classroom/cc/crash-course">Crash Course</a></li>
-                                   <li class="nav-item"><a class="nav-link" href="classroom/ac/advanced-concepts">Advanced</a></li>
-                                   <li class="nav-item"><a class="nav-link" href="classroom/ml/machine-learning">Machine Learning</a></li>
-                                   <li class="nav-item"><a class="nav-link" href="resources">Resources</a></li>
-                               </ul>
-                           </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </header>
+    <section class="breadcrumb_area br_image">
+      <div class="container">
+        <div class="page-cover text-center">
+          <h2 class="page-cover-tittle">Resources</h2>
+        </div>
+      </div>
+    </section>
+    <div class="container" style="padding-bottom: 60px">
+      <div class="row">
+        <div class="col-md-12 event_details">
+          <h2
+            class="res_eve_det mobile_scroll"
+            style="font-size:150%; padding-top: 40px;"
+          >
+            Learn to Code
+          </h2>
 
-        <section class="breadcrumb_area br_image">
-            <div class="container">
-                <div class="page-cover text-center">
-                    <h2 class="page-cover-tittle">Resources</h2>
-                </div>
-            </div>
-        </section>
-            <div class="container" style="padding-bottom: 60px">
-                <div class="row">
-                  <div class="col-md-12 event_details">
+          <ul
+            class="list_style calendar_category event_category"
+            style="padding-bottom: 0px;"
+          >
+            <li>
+              <a class="res_link" href="https://www.codecademy.com/"
+                >Codecademy</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://www.freecodecamp.org/"
+                >Free Code Camp</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://learntocodewith.me/coursera"
+                >Coursera</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://learntocodewith.me/edx">EdX</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://www.codewars.com/">CodeWars</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://www.khanacademy.org/"
+                >Khan Academy</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://www.w3schools.com/"
+                >W3Schools</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://coderbyte.com/">Coderbyte</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://codelabs.developers.google.com/"
+                >Google CodeLabs</a
+              >
+            </li>
+          </ul>
+          <h2 class="res_eve_det" style="font-size:150%;">YouTube</h2>
+          <ul
+            class="list_style calendar_category event_category"
+            style="padding-bottom: 0px;"
+          >
+            <li>
+              <a class="res_link" href="https://goo.gl/wQqBOH"
+                >Learncode.academy</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://goo.gl/ti7FUL">Treehouse</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://goo.gl/k9rEKX">CSS-Tricks</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://www.youtube.com/user/derekbanas"
+                >Derek Banas</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://www.youtube.com/user/phpacademy"
+                >Codecourse</a
+              >
+            </li>
+          </ul>
+          <h2 class="res_eve_det" style="font-size:150%;">Cybersecurity</h2>
+          <ul
+            class="list_style calendar_category event_category"
+            style="padding-bottom: 0px;"
+          >
+            <li>
+              <a class="res_link" href="http://trailofbits.github.io/ctf/"
+                >Trail of Bits</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://overthewire.org/wargames/"
+                >Over the Wire</a
+              >
+            </li>
+            <li>
+              <a
+                class="res_link"
+                href="https://www.wechall.net/site/details/65/CanYouHack.It"
+                >CanYouHack.it</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://github.com/ctfs"
+                >CTF Writeups</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://www.cybrary.it/">Cybary</a>
+            </li>
+            <li>
+              <a class="res_link" href="https://null-byte.wonderhowto.com/"
+                >Null Byte</a
+              >
+            </li>
+          </ul>
+          <h2 class="res_eve_det" style="font-size:150%;">
+            Competitions and Hackathons
+          </h2>
+          <ul
+            class="list_style calendar_category event_category"
+            style="padding-bottom: 0px;"
+          >
+            <li>
+              <a class="res_link" href="https://hackathons.hackclub.com/"
+                >Hack Club</a
+              >
+            </li>
+            <li>
+              <a class="res_link" href="https://ctftime.org/ctfs">CTF Time</a>
+            </li>
+            <li>
+              <a
+                class="res_link"
+                href="https://codingcompetitions.withgoogle.com/kickstart"
+                >Google Kick Start</a
+              >
+            </li>
+          </ul>
+          <p>
+            <strong
+              ><b style="color:#777777; font-size: 125%;">
+                If you're looking for a resource that isn't here,
+                <a href="contact">contact us</a>!</b
+              ></strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--================ start footer Area  =================-->
+    <footer class="footer-bs">
+      <div class="row">
+        <div class="col-md-4 footer-brand animated fadeInLeft">
+          <h2 style="color:white; font-weight: bold; font-size:200%">
+            def include( )
+          </h2>
+          <p>
+            A summer program for middle school and high school girls to gain new
+            skills in various computer science topics.
+          </p>
+        </div>
+        <div class="col-md-4 footer-nav animated fadeInUp">
+          <div class="col-md-4">
+            <ul class="pages">
+              <li><a href="our-mission">Our Mission</a></li>
+              <li><a href="event">Calendar</a></li>
+              <li><a href="resources">Resources</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list">
+              <li><a href="about-us">About Us</a></li>
+              <li><a href="contact">Get Involved</a></li>
+            </ul>
+          </div>
+        </div>
 
-                      <h2 class="res_eve_det mobile_scroll" style="font-size:150%; padding-top: 40px;"> Learn to Code </h2>
+        <div class="col-md-4 footer-ns animated fadeInRight">
+          <h4 style="color:white; font-weight: bold;">Newsletter</h4>
+          <p>Subscribe to emails about upcoming events</p>
+          <form name="submit-to-google-sheet" class="input-group">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Email"
+            />
+            <span class="input-group-btn">
+              <button class="btn btn-default" id="submit-form" type="submit">
+                <div class="glyphicon glyphicon-envelope"></div>
+              </button>
+            </span>
+          </form>
+          <p id="email-conf"><br />Thanks for subscribing!</p>
+        </div>
+        <!-- /input-group -->
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
 
-                      <ul class="list_style calendar_category event_category" style="padding-bottom: 0px;">
-                          <li><a class="res_link" href="https://www.codecademy.com/">Codecademy</a></li>
-                          <li><a class="res_link" href="https://www.freecodecamp.org/">Free Code Camp</a></li>
-                          <li><a class="res_link" href="https://learntocodewith.me/coursera">Coursera</a></li>
-                          <li><a class="res_link" href="https://learntocodewith.me/edx">EdX</a></li>
-                          <li><a class="res_link" href="https://www.codewars.com/">CodeWars</a></li>
-                          <li><a class="res_link" href="https://www.khanacademy.org/">Khan Academy</a></li>
-                          <li><a class="res_link" href="https://www.w3schools.com/">W3Schools</a></li>
-                          <li><a class="res_link" href="https://coderbyte.com/">Coderbyte</a></li>
-                          <li><a class="res_link" href="https://codelabs.developers.google.com/">Google CodeLabs</a></li>
-                      </ul>
-                      <h2 class="res_eve_det" style="font-size:150%;"> YouTube </h2>
-                      <ul class="list_style calendar_category event_category" style="padding-bottom: 0px;">
-                          <li><a class="res_link" href="https://goo.gl/wQqBOH">Learncode.academy</a></li>
-                          <li><a class="res_link" href="https://goo.gl/ti7FUL">Treehouse</a></li>
-                          <li><a class="res_link" href="https://goo.gl/k9rEKX">CSS-Tricks</a></li>
-                          <li><a class="res_link" href="https://www.youtube.com/user/derekbanas">Derek Banas</a></li>
-                          <li><a class="res_link" href="https://www.youtube.com/user/phpacademy">Codecourse</a></li>
-                      </ul>
-                      <h2 class="res_eve_det" style="font-size:150%;"> Cybersecurity </h2>
-                      <ul class="list_style calendar_category event_category" style="padding-bottom: 0px;">
-                          <li><a class="res_link" href="http://trailofbits.github.io/ctf/">Trail of Bits</a></li>
-                          <li><a class="res_link" href="https://overthewire.org/wargames/">Over the Wire</a></li>
-                          <li><a class="res_link" href="https://www.wechall.net/site/details/65/CanYouHack.It">CanYouHack.it</a></li>
-                          <li><a class="res_link" href="https://github.com/ctfs">CTF Writeups</a></li>
-                          <li><a class="res_link" href="https://www.cybrary.it/">Cybary</a></li>
-                          <li><a class="res_link" href="https://null-byte.wonderhowto.com/">Null Byte</a></li>
-                      </ul>
-                      <h2 class="res_eve_det" style="font-size:150%;"> Competitions and Hackathons </h2>
-                      <ul class="list_style calendar_category event_category" style="padding-bottom: 0px;">
-                          <li><a class="res_link" href="https://hackathons.hackclub.com/">Hack Club</a></li>
-                          <li><a class="res_link" href="https://ctftime.org/ctfs">CTF Time</a></li>
-                          <li><a class="res_link" href="https://codingcompetitions.withgoogle.com/kickstart">Google Kick Start</a></li>
-                      </ul>
-                      <p><strong><b style="color:#777777; font-size: 125%;"> If you're looking for a resource that isn't here, <a href="contact">contact us</a>!</b></strong></p>
-                  </div>
-                </div>
-            </div>
-        <!--================ start footer Area  =================-->
-        <footer class="footer-bs">
-             <div class="row">
-             	<div class="col-md-4 footer-brand animated fadeInLeft">
-                 	<h2 style="color:white; font-weight: bold; font-size:200%">def include( )</h2>
-                     <p>A summer program for middle school and high school girls to gain new skills in various computer science topics.</p>
-                 </div>
-             	<div class="col-md-4 footer-nav animated fadeInUp">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxY_U44D0S3VHyvYlTKxDpwsdP2xliioHcufUcEZnxaei-ehnYL/exec";
+      const form = document.forms["submit-to-google-sheet"];
 
-                 	<div class="col-md-4">
-                         <ul class="pages">
-                             <li><a href="our-mission">Our Mission</a></li>
-                             <li><a href="event">Calendar</a></li>
-                             <li><a href="resources">Resources</a></li>
-                         </ul>
-                     </div>
-                 	<div class="col-md-4">
-                         <ul class="list">
-                             <li><a href="about-us">About Us</a></li>
-                             <li><a href="contact">Get Involved</a></li>
-                         </ul>
-                     </div>
-     </div>
-
-             	<div class="col-md-4 footer-ns animated fadeInRight">
-                 	<h4 style="color:white; font-weight: bold;">Newsletter</h4>
-                     <p>Subscribe to emails about upcoming events</p>
-                     <p>
-                       <form name="submit-to-google-sheet" class="input-group">
-                         <input type="email" class="form-control" name="email" placeholder="Email">
-                         <span class="input-group-btn">
-                           <button class="btn btn-default" id="submit-form" type="submit"><div class="glyphicon glyphicon-envelope"></div></button>
-                         </span></form>
-                         <p id="email-conf"><br>Thanks for subscribing!</p>
-                       </div><!-- /input-group -->
-                 </div>
-
-         </footer>
-		<!--================ End footer Area  =================-->
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="js/custom.js"></script>
-        <script>
-        const scriptURL = "https://script.google.com/macros/s/AKfycbxY_U44D0S3VHyvYlTKxDpwsdP2xliioHcufUcEZnxaei-ehnYL/exec"
-        const form = document.forms['submit-to-google-sheet']
-
-        form.addEventListener('submit', e => {
-           e.preventDefault()
-           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-             .then(document.getElementById("email-conf").removeAttribute("id"))
-             .catch(error => console.error('Error!', error.message))
-         })
-         </script>
-</body>
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(document.getElementById("email-conf").removeAttribute("id"))
+          .catch(error => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
 </html>

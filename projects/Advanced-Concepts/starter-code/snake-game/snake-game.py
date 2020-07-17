@@ -63,7 +63,7 @@ def gameLoop():
     # Sets the initial length of the snake to 1
     snake_length = 1
 
-    #Position the food (foodx, foody) to a random location
+    #Position the food (foodx, foody) to a random location using random module
 
     #While the game is not over
     while not game_over:
@@ -102,11 +102,13 @@ def gameLoop():
         dis.fill(blue)
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
 
-        # 6. Create a list for the current position of the snake
+        # 6. Create an empty list for the current position of the snake
 
-        # 7. Append the current position of the snake to the snake
+        # 7. Append the current position of the snake to the list
+        #    Hint: You're creating a list with the length of two where
+        #          [0] is x and [1] is y
 
-        # 8. Add the new list to snake_List
+        # 8. Add the new list you just created to snake_List
 
         # 9. If the length of snake_List is bigger than the snake_length,
         #   delete the first index of snake_List

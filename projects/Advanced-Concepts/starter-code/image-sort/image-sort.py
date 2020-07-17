@@ -4,15 +4,15 @@ import os
 import shutil
 
 # Access your application
-app = ClarifaiApp(api_key="INSERT_API_KEY_HERE")
+clarifai_app = ClarifaiApp(api_key='INSERT_API_KEY_HERE')
 # This is the General model id
-model = app.models.get(model_id="aaa03c23b3724a16a56b629203edc62c")
+clarifai_model = app.models.get(model_id='aaa03c23b3724a16a56b629203edc62c')
 
-DIRECTORIES = ["puppy", "tree", "city", "cream"]
-# Type out the full path toclarifai_images
-path = '<PATH_TO_FOLDER_OF_IMAGES'
+DIRECTORIES = ['puppy', 'tree', 'city', 'cream']
+# Type out the full path to clarifai_images
+clarifai_images_path = '<PATH_TO_FOLDER_OF_IMAGES>'
 
-list_ = os.listdir(path)
+image_filenames = os.listdir(path)
 
 # START CODING HERE
 

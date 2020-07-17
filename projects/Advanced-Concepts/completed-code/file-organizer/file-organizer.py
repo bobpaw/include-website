@@ -49,5 +49,5 @@ for file_ in list_:
             else:
                 os.makedirs(path+'/'+key)
                 shutil.move(path+'/'+file_,path+'/'+key+'/'+file_)
-        else:
+        else: 
             continue
