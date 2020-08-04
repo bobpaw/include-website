@@ -254,13 +254,13 @@ button:focus {
 
 @media (max-width: 991px) {
   .header_area .navbar .nav .nav-item .nav-link  {
-    padding-bottom: 4px;
+    padding-bottom: 7px;
   }
 }
 
 @media (max-width: 900px) {
   .mobile_scroll  {
-    padding-bottom: 4px;
+    padding-bottom: 7px;
   }
 }
 
@@ -511,16 +511,14 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   color: #fff;
   background: #EE827F;
   border: 1px solid #fff;
 }
-
-.left_item{
-  padding-left: 15%;
-  padding-right: 15%;
+.special_mobile_css {
+  text-align: center;
 }
-
 @media (max-width:1500px) {
   .special_mobile_css {
     margin-left: 40px;
@@ -2564,7 +2562,7 @@ body {
 
      p.faqp {
      	padding: 20px;
-     	font-size: 16px;
+
      }
 
      h3.faqq {
