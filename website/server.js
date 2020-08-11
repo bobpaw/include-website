@@ -1,16 +1,17 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const app = express();
+var app = express();
 const path = require('path')
 const http = require("http");
 const session = require('express-session');
-const port = 8082;
+const port = 8081;
 const fs = require("fs");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { check, validationResult } = require('express-validator/check');
 var LocalStrategy   = require('passport-local').Strategy;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
 app.use(session({
 	secret: 'secret',
@@ -19,7 +20,7 @@ app.use(session({
 }));
 
 app.use(express.static("view", { extensions: ['html'] }));
-
+//app.use(express.static("view"));
 
 pass2 = "2";
 function callback(responseText){
@@ -114,7 +115,7 @@ app.use(protectPath(/^\/protected\/.*$/));
  			if (results.length > 0) {
  				request.session.loggedin = true;
  				request.session.username = username;
- 				response.redirect('/admin');
+ 				response.redirect('/web-development');
  			} else {
  				response.send('Incorrect Username and/or Password!');
  			}
@@ -126,9 +127,9 @@ app.use(protectPath(/^\/protected\/.*$/));
  	}
  });
 
- app.get('/admin', function(request, response) {
+ app.get('/web-development', function(request, response) {
  	if (request.session.loggedin) {
- 		return response.sendFile(__dirname + '/view/classroom/web-dev/protected/web-development.html');
+ 		return response.sendFile(__dirname + '/protected/webdevelopment.html');
  	} else {
  		return response.send('Please login to view this page!');
  	}
