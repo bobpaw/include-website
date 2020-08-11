@@ -18,7 +18,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use(express.static());
+app.use(express.static("view"));
 
 
 pass2 = "2";
@@ -128,7 +128,7 @@ app.use(protectPath(/^\/protected\/.*$/));
 
  app.get('/admin', function(request, response) {
  	if (request.session.loggedin) {
- 		return response.sendFile(__dirname + '/classroom/web-dev/protected/web-development.html');
+ 		return response.sendFile(__dirname + '/view/classroom/web-dev/protected/web-development.html');
  	} else {
  		return response.send('Please login to view this page!');
  	}
