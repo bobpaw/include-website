@@ -129,7 +129,9 @@ app.use(protectPath(/^\/protected\/.*$/));
 
  app.get('/web-development', function(request, response) {
  	if (request.session.loggedin) {
- 		return response.sendFile(__dirname + '/protected/webdevelopment.html');
+		let html = fs.readFileSync(path.join(__dirname,'/protected/webdevelopment.html'));
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.end(html);
  	} else {
  		return response.send('Please login to view this page!');
  	}
