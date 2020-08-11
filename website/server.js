@@ -18,7 +18,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use(express.static("view"));
+app.use(express.static("view", { extensions: ['html'] }));
 
 
 pass2 = "2";
@@ -67,7 +67,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 
-var server = app.listen(8082, "127.0.0.1", function () {
+var server = app.listen(8081, "127.0.0.1", function () {
 
   var host = server.address().address
   var port = server.address().port
