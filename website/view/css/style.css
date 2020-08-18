@@ -254,7 +254,7 @@ button:focus {
 
 @media (max-width: 991px) {
   .header_area .navbar .nav .nav-item .nav-link  {
-    padding-bottom: 7px;
+    padding-bottom: 8px;
   }
 }
 
