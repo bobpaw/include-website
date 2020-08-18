@@ -4,7 +4,7 @@ var app = express();
 const path = require('path')
 const http = require("http");
 const session = require('express-session');
-const port = 8081;
+const port = 80;
 const fs = require("fs");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { check, validationResult } = require('express-validator/check');
@@ -68,7 +68,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 
-var server = app.listen(8081, "127.0.0.1", function () {
+var server = app.listen(80, "0.0.0.0", function () {
 
   var host = server.address().address
   var port = server.address().port
