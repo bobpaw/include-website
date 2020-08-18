@@ -4,7 +4,7 @@ var app = express();
 const path = require('path')
 const http = require("http");
 const session = require('express-session');
-const port = 80;
+const port = 8081;
 const fs = require("fs");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { check, validationResult } = require('express-validator/check');
@@ -28,32 +28,12 @@ function callback(responseText){
     pass2 = save;
 }
 
-function readTextFile(file, act_on_response)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                callback(rawFile.responseText);
-            }
-        }
-    }
-    rawFile.send();
-}
-
-readTextFile("file://C:/Users/adiso/Downloads/password.txt")
-
 // init db
 var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: pass2,
+  password: "password",
   database: "testdb"
 });
 
@@ -68,7 +48,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 
-var server = app.listen(80, "0.0.0.0", function () {
+var server = app.listen(8080, "127.0.0.1", function () {
 
   var host = server.address().address
   var port = server.address().port
