@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="image/favicon.png" type="image/png" />
+    <title>Define Include</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-166889026-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-166889026-1");
+    </script>
+  </head>
+	<body class="login-body">
+    <header class="header_area">
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="margin-top:50px;"
+      >
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index"
+            ><img src="image/Logo.png" alt="" width="175" height="40"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse offset"
+            id="navbarSupportedContent"
+          >
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="our-mission">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="event">Events</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us">Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="partners">Partners</a>
+              </li>
+              <li class="nav-item submenu dropdown active">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color:black"
+                  >Classroom</a
+                >
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/cc/crash-course"
+                      >Crash Course</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/ac/advanced-concepts"
+                      >Advanced</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="classroom/ml/machine-learning"
+                      >Machine Learning</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resources">Resources</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+		<div class="login-container">
+			<div class="login-form">
+				<h1>Login</h1>
+				<form action="auth" method="POST">
+					<input type="text" name="username" placeholder="Username" required>
+					<input type="password" name="password" placeholder="Password" required>
+					<div class="submit-border">
+						<button type="submit"><div class="submit-text">Submit</div></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

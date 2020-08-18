@@ -1,8 +1,6 @@
 import random
 import tkinter
 
-
-
 def get_winner(call):
     #global wins, win, output
     comp_call = random.randint(1,3)
