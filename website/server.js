@@ -47,8 +47,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-
-var server = app.listen(80, "0.0.0.0", function () {
+var server = app.listen(8080, "127.0.0.1", function () {
+//var server = app.listen(80, "0.0.0.0", function () {
 
   var host = server.address().address
   var port = server.address().port
@@ -116,4 +116,15 @@ app.use(protectPath(/^\/protected\/.*$/));
  		return response.send('Please login to view this page!');
  	}
  	response.end();
+ });
+
+ app.get('/web-development/week-1', function(request, response) {
+	 if (request.session.loggedin) {
+	 let html = fs.readFileSync(path.join(__dirname,'/protected/week1.html'));
+		response.writeHead(200, {'Content-Type': 'text/html'});
+		response.end(html);
+	 } else {
+		 return response.send('Please login to view this page!');
+	 }
+	 response.end();
  });
