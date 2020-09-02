@@ -47,8 +47,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-var server = app.listen(8080, "127.0.0.1", function () {
-//var server = app.listen(80, "0.0.0.0", function () {
+//var server = app.listen(8080, "127.0.0.1", function () {
+var server = app.listen(80, "0.0.0.0", function () {
 
   var host = server.address().address
   var port = server.address().port
