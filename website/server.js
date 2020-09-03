@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 var app = express();
 const path = require('path')
-//const http = require("http");
+const http = require("http");
 const https = require('https');
 const session = require('express-session');
 const port = 80;
@@ -54,18 +54,18 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 //var server = app.listen(8080, "127.0.0.1", function () {
 
-var server = https.createServer(options, app);
-server.listen(port, () => {
-  console.log("server starting on port : " + port)
+//var server = https.createServer(options, app);
+//server.listen(port, () => {
+  //console.log("server starting on port : " + port)
+//});
+var server = app.listen(80, "0.0.0.0", function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("Example app listening at https://%s:%s", host, port)
+
 });
-// var server = app.listen(80, "0.0.0.0", function () {
-//
-//   var host = server.address().address
-//   var port = server.address().port
-//
-//   console.log("Example app listening at https://%s:%s", host, port)
-//
-// });
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
