@@ -47,12 +47,13 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
-http.createServer(app).listen(80);
-app.use(function (req, res, next) {
-  if (!req.secure && req.get("x-forwarded-proto") !== "https") {
-    return res.redirect("https://" + req.get("Host") + req.path);
-  }
-  next();
+app.all('*', function(req, res, next){
+    console.log('req start: ',req.secure, req.hostname, req.url, app.get('port'));
+    if (req.secure) {
+        return next();
+    }
+
+    res.redirect('https://'+req.hostname + ':' + app.get('secPort') + req.url);
 });
 
 
