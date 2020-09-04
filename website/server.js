@@ -47,6 +47,13 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
+app.use(function (req, res, next) {
+  if (!req.secure && req.get("x-forwarded-proto") !== "https") {
+    return res.redirect("https://" + req.get("Host") + req.path);
+  }
+  next();
+}
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -67,12 +74,6 @@ https
     console.log('Listening...')
   })
 ;
-
-http.createServer(app).listen(80)
-
-app.get("http://*", function (req, res) {
-res.redirect(`https://${req.headers.host}${req.path}`);
-});
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
