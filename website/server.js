@@ -10,8 +10,8 @@ const fs = require("fs");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { check, validationResult } = require('express-validator');
 const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem')
 };
 var LocalStrategy   = require('passport-local').Strategy;
 
