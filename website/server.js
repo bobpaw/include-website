@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 var app = express();
+const httpApp = express();
 const path = require('path')
 const http = require("http");
 const https = require('https');
@@ -47,13 +48,12 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
-app.all('*', function(req, res, next){
-    console.log('req start: ',req.secure, req.hostname, req.url, app.get('port'));
-    if (req.secure) {
-        return next();
-    }
+httpApp.get("*", function(req, res, next) {
+    res.redirect("https://" + req.headers.host + req.path);
+});
 
-    res.redirect('https://'+req.hostname + ':' + app.get('secPort') + req.url);
+http.createServer(httpApp).listen(80, function() {
+    console.log("Express TTP server listening on port 80");
 });
 
 
