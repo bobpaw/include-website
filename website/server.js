@@ -49,7 +49,11 @@ con.connect(function(err) {
 });
 
 httpApp.get("*", function(req, res, next) {
-    res.redirect("https://" + req.headers.host + req.path);
+    res.redirect("https://defineinclude.com" + req.path);
+});
+
+app.get("*", function(req, res, next) {
+    res.redirect("https://defineinclude.com" + req.path);
 });
 
 http.createServer(httpApp).listen(80, function() {
