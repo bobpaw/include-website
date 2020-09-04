@@ -54,18 +54,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 //var server = app.listen(8080, "127.0.0.1", function () {
 
-//var server = https.createServer(options, app);
-//server.listen(port, () => {
-  //console.log("server starting on port : " + port)
-//});
-var server = app.listen(80, "0.0.0.0", function () {
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(options, app);
 
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at https://%s:%s", host, port)
-
-});
+httpServer.listen(80);
+httpsServer.listen(443);
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
