@@ -54,11 +54,29 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 //var server = app.listen(8080, "127.0.0.1", function () {
 
-var httpServer = http.createServer(app);
-var httpsServer = https.createServer(options, app);
+https
+  .createServer(
+    {
+      key: fs.readFileSync('/etc/letsencrypt/path/to/key.pem'),
+      cert: fs.readFileSync('/etc/letsencrypt/path/to/cert.pem'),
+      ca: fs.readFileSync('/etc/letsencrypt/path/to/chain.pem'),
+    },
+    app
+  )
+  .listen(443, () => {
+    console.log('Listening...')
+  })
+;
 
-httpServer.listen(80);
-httpsServer.listen(443);
+var http = express.createServer();
+
+// set up a route to redirect http to https
+http.get('*', function(req, res) {
+    res.redirect('https://' + req.headers.host + req.url);
+
+    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
+    // res.redirect('https://example.com' + req.url);
+})
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
