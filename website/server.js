@@ -54,6 +54,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 //var server = app.listen(8080, "127.0.0.1", function () {
 
+app.all('*', ensureSecure);
+
 https
   .createServer(
     {
@@ -67,6 +69,18 @@ https
     console.log('Listening...')
   })
 ;
+
+http.createServer(app).listen(80);
+
+function ensureSecure(req, res, next){
+  if(req.secure){
+    // OK, continue
+    return next();
+  };
+  // handle port numbers if you need non defaults
+  // res.redirect('https://' + req.host + req.url); // express 3.x
+  res.redirect('https://' + req.hostname + req.url); // express 4.x
+}
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
