@@ -57,9 +57,9 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 https
   .createServer(
     {
-      key: fs.readFileSync('/etc/letsencrypt/path/to/key.pem'),
-      cert: fs.readFileSync('/etc/letsencrypt/path/to/cert.pem'),
-      ca: fs.readFileSync('/etc/letsencrypt/path/to/chain.pem'),
+      key: fs.readFileSync('key.pem'),
+      cert: fs.readFileSync('cert.pem'),
+      ca: fs.readFileSync('chain.pem'),
     },
     app
   )
