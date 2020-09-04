@@ -68,7 +68,7 @@ https
   })
 ;
 
-var http2 = http.createServer();
+var http2 = http.createServer(app);
 
 // set up a route to redirect http to https
 http2.get('*', function(req, res) {
