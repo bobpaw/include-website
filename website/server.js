@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 var app = express();
 const path = require('path')
-const http = require("http");
+//const http = require("http");
 const https = require('https');
 const session = require('express-session');
 const port = 80;
@@ -72,6 +72,13 @@ var http = express.createServer();
 
 // set up a route to redirect http to https
 http.get('*', function(req, res) {
+    res.redirect('https://' + req.headers.host + req.url);
+
+    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
+    // res.redirect('https://example.com' + req.url);
+})
+
+https.get('https://*', function(req, res) {
     res.redirect('https://' + req.headers.host + req.url);
 
     // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
