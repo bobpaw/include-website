@@ -25,6 +25,7 @@ app.use(session({
 }));
 
 app.use(express.static("view", { extensions: ['html'] }));
+//app.use(express.static("view"));
 
 pass2 = "2";
 function callback(responseText){
@@ -46,6 +47,7 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
+http.createServer(app).listen(80);
 app.use(function (req, res, next) {
   if (!req.secure && req.get("x-forwarded-proto") !== "https") {
     return res.redirect("https://" + req.get("Host") + req.path);
@@ -53,12 +55,11 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-
-//var server = app.listen(8080, "127.0.0.1", function () {
 
 https
   .createServer(
