@@ -68,9 +68,9 @@ https
   })
 ;
 
-http.createServer(app).listen(80).get("http://*", function (req, res) {
-res.redirect(`https://${req.hostname}${req.path}`);
-});
+http.createServer(app)res.redirect(`https://${req.hostname}${req.path}`);
+}
+app.listen(80);
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
