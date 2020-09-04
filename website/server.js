@@ -25,7 +25,6 @@ app.use(session({
 }));
 
 app.use(express.static("view", { extensions: ['html'] }));
-//app.use(express.static("view"));
 
 pass2 = "2";
 function callback(responseText){
