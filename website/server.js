@@ -68,7 +68,7 @@ https
   })
 ;
 
-var http = express.createServer();
+var http = app.createServer();
 
 // set up a route to redirect http to https
 http.get('*', function(req, res) {
