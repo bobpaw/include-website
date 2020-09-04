@@ -68,7 +68,8 @@ https
   })
 ;
 
-http.createServer(app)res.redirect(`https://${req.hostname}${req.path}`);
+http.createServer(options, app).get("http://*", function (req, res) {
+res.redirect(`https://${req.hostname}${req.path}`);
 }
 app.listen(80);
 
