@@ -52,7 +52,7 @@ app.use(function (req, res, next) {
     return res.redirect("https://" + req.get("Host") + req.path);
   }
   next();
-}
+});
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
