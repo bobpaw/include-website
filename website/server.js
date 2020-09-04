@@ -68,23 +68,6 @@ https
   })
 ;
 
-var http2 = http.createServer(app);
-
-// set up a route to redirect http to https
-http2.get('*', function(req, res) {
-    res.redirect('https://' + req.headers.host + req.url);
-
-    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-    // res.redirect('https://example.com' + req.url);
-})
-
-https.get('https://*', function(req, res) {
-    res.redirect('https://' + req.headers.host + req.url);
-
-    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-    // res.redirect('https://example.com' + req.url);
-})
-
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
   // about whether or not the user is allowed to see files in the
