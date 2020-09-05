@@ -52,9 +52,9 @@ httpApp.get("*", function(req, res, next) {
     res.redirect("https://defineinclude.com" + req.path);
 });
 
-app.get("*", function(req, res, next) {
-    res.redirect("https://defineinclude.com" + req.path);
-});
+// app.get("*", function(req, res, next) {
+//     res.redirect("https://defineinclude.com" + req.path);
+// });
 
 http.createServer(httpApp).listen(80, function() {
     console.log("Express TTP server listening on port 80");
