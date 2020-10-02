@@ -184,3 +184,14 @@ app.use(protectPath(/^\/protected\/.*$/));
   }
   response.end();
  });
+
+ app.get('/web-development/week-5', function(request, response) {
+  if (request.session.loggedin) {
+  let html = fs.readFileSync(path.join(__dirname,'/protected/week5.html'));
+   response.writeHead(200, {'Content-Type': 'text/html'});
+   response.end(html);
+  } else {
+    return response.send('Please login to view this page!');
+  }
+  response.end();
+ });
