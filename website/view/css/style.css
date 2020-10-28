@@ -2856,10 +2856,12 @@ body {
   margin-top: 20px;
 }
 
+.weekbox {
+  position: absolute;
+}
+
 .live-lesson-info {
   font-weight:bold;
-  border-color: white;
-  padding: 1px;
   margin-top:10px;
 }
 
