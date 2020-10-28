@@ -2858,7 +2858,6 @@ body {
 
 .live-lesson-info {
   font-weight:bold;
-  margin-top:10px;
 }
 
 .zoom-style {
@@ -2893,7 +2892,7 @@ body {
   color:#f6b66c;
 }
 
-link-text-dec {
+.link-text-dec {
   text-decoration:none;
 }
 
