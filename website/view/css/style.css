@@ -2858,6 +2858,8 @@ body {
 
 .live-lesson-info {
   font-weight:bold;
+  border-color: white;
+  padding: 1px;
   margin-top:10px;
 }
 
