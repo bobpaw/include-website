@@ -26,7 +26,6 @@ app.use(session({
 }));
 
 app.use(express.static("view", { extensions: ['html'] }));
-//app.use(express.static("view"));
 
 pass2 = "2";
 function callback(responseText){
@@ -52,9 +51,6 @@ httpApp.get("*", function(req, res, next) {
     res.redirect("https://defineinclude.com" + req.path);
 });
 
-// app.get("*", function(req, res, next) {
-//     res.redirect("https://defineinclude.com" + req.path);
-// });
 
 http.createServer(httpApp).listen(80, function() {
     console.log("Express TTP server listening on port 80");
@@ -110,9 +106,7 @@ app.use(protectPath(/^\/protected\/.*$/));
    check('password').trim().escape()
  ], function(request, response) {
  	var username = request.body.username;
-   console.log(username);
 	 var password = request.body.password;
-   console.log(password);
  	if (username && password) {
  		con.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
  			if (results.length > 0) {
@@ -130,101 +124,13 @@ app.use(protectPath(/^\/protected\/.*$/));
  	}
  });
 
- app.get('/web-development', function(request, response) {
+ app.get('/web-development/:weekname', function(request, response) {
  	if (request.session.loggedin) {
-		let html = fs.readFileSync(path.join(__dirname,'/protected/webdevelopment.html'));
+		let html = fs.readFileSync(path.join(__dirname,'/protected/' + request.params["weekname"]'html'));
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.end(html);
  	} else {
  		return response.send('Please login to view this page!');
  	}
  	response.end();
- });
-
- app.get('/web-development/week-1', function(request, response) {
-	 if (request.session.loggedin) {
-	 let html = fs.readFileSync(path.join(__dirname,'/protected/week1.html'));
-		response.writeHead(200, {'Content-Type': 'text/html'});
-		response.end(html);
-	 } else {
-		 return response.send('Please login to view this page!');
-	 }
-	 response.end();
- });
-
- app.get('/web-development/week-2', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week2.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-3', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week3.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-4', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week4.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-5', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week5.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-6', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week6.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-7', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week7.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
- });
-
- app.get('/web-development/week-8', function(request, response) {
-  if (request.session.loggedin) {
-  let html = fs.readFileSync(path.join(__dirname,'/protected/week8.html'));
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   response.end(html);
-  } else {
-    return response.send('Please login to view this page!');
-  }
-  response.end();
  });
