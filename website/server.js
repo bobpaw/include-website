@@ -126,7 +126,7 @@ app.use(protectPath(/^\/protected\/.*$/));
 
  app.get('/web-development/:weekname', function(request, response) {
  	if (request.session.loggedin) {
-		let html = fs.readFileSync(path.join(__dirname,'/protected/' + request.params["weekname"]'html'));
+		let html = fs.readFileSync(path.join(__dirname,'/protected/' + request.params["weekname"]+'.html'));
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.end(html);
  	} else {
