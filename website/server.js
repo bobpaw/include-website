@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-var app = express();
+const app = express();
+const httpApp = express();
 const path = require('path')
 const http = require("http");
 const https = require('https');
@@ -25,7 +26,6 @@ app.use(session({
 }));
 
 app.use(express.static("view", { extensions: ['html'] }));
-//app.use(express.static("view"));
 
 pass2 = "2";
 function callback(responseText){
@@ -47,12 +47,20 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
+httpApp.get("*", function(req, res, next) {
+    res.redirect("https://defineinclude.com" + req.path);
+});
+
+
+http.createServer(httpApp).listen(80, function() {
+    console.log("Express TTP server listening on port 80");
+});
+
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-
-//var server = app.listen(8080, "127.0.0.1", function () {
 
 https
   .createServer(
@@ -67,11 +75,6 @@ https
     console.log('Listening...')
   })
 ;
-
-http.createServer(options, app).get("http://*", function (req, res) {
-res.redirect(`https://${req.hostname}${req.path}`);
-}
-app.listen(80);
 
 function userIsAllowed(callback, status) {
   // this function would contain your logic, presumably asynchronous,
@@ -103,9 +106,7 @@ app.use(protectPath(/^\/protected\/.*$/));
    check('password').trim().escape()
  ], function(request, response) {
  	var username = request.body.username;
-   console.log(username);
 	 var password = request.body.password;
-   console.log(password);
  	if (username && password) {
  		con.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
  			if (results.length > 0) {
@@ -125,7 +126,7 @@ app.use(protectPath(/^\/protected\/.*$/));
 
  app.get('/web-development', function(request, response) {
  	if (request.session.loggedin) {
-		let html = fs.readFileSync(path.join(__dirname,'/protected/webdevelopment.html'));
+		let html = fs.readFileSync(path.join(__dirname,'/protected/web-development.html'));
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.end(html);
  	} else {
@@ -134,13 +135,13 @@ app.use(protectPath(/^\/protected\/.*$/));
  	response.end();
  });
 
- app.get('/web-development/week-1', function(request, response) {
-	 if (request.session.loggedin) {
-	 let html = fs.readFileSync(path.join(__dirname,'/protected/week1.html'));
-		response.writeHead(200, {'Content-Type': 'text/html'});
-		response.end(html);
-	 } else {
-		 return response.send('Please login to view this page!');
-	 }
-	 response.end();
+ app.get('/web-development/:weekname', function(request, response) {
+   if (request.session.loggedin) {
+   let html = fs.readFileSync(path.join(__dirname,'/protected/' + request.params["weekname"]+'.html'));
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.end(html);
+   } else {
+     return response.send('Please login to view this page!');
+   }
+   response.end();
  });
