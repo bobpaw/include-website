@@ -4,9 +4,17 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Adison Lampert",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "mysql": "^2.18.1",
+    "passport-local": "^1.0.0",
+    "pm2": "^4.5.0",
+    "xmlhttprequest": "^1.8.0"
+  }
 }
