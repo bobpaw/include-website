@@ -596,7 +596,7 @@ h3 {
 }
 
 .calendar_category li a {
-  color: #7777777;
+  color: #7777777; /* FIXME: One too many digits */
 }
 
 .calendar_category li i {
@@ -2582,7 +2582,7 @@ body {
      h3.cerrar {
      	cursor: pointer;
 
-     	&::after {
+     	&::after { /* FIXME: Appears to be SASS code */
      		content: "\2715";
      		float: right;
      		font-size: 11px;
@@ -2601,7 +2601,7 @@ body {
 
 
      h3:hover {
-     	&::before {
+     	&::before { /* FIXME: Appears to be SASS code */
      		opacity: 0.55;
      		-moz-transform: rotate(90deg);
      		-ms-transform: rotate(90deg);
@@ -2624,7 +2624,7 @@ body {
      }
 
      #cerrartodas {
-     	background-color:@color2;
+     	background-color:@color2; /* FIXME: Appears to be SASS code */
      	bottom: 30px;
      	color: lighten(#3D9970, 100%);
      	font-size: 14px;
@@ -2808,7 +2808,7 @@ body {
 }
 
 .submit-text {
-  text-height: 100%;
+  text-height: 100%; /* FIXME: This property is deprecated and no longer works in any browser */
   width: 100%;
   padding: 15px 0px;
   color: #F6B66C;
